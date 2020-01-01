@@ -17,6 +17,7 @@ public class Test1 {
         List<IndexTag> idList = Screen.deleteTag();
 //        System.out.println(idList.size());
 
+        //
         int m = 0;
         for (IndexTag a :idList) {
             m++;
