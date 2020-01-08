@@ -1,5 +1,6 @@
 package edu.hust.data;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import edu.hust.mysql.Mysql;
 import hdb.*;
 
@@ -15,10 +16,10 @@ public class Data {
 
 
         String[] num = tableName.split("\\_");
-        int year = Integer.parseInt(num[1]);
-        int month = Integer.parseInt(num[2]);
+        int year = Integer.parseInt(num[2]);
+        int month = Integer.parseInt(num[3]);
 
-        int b = rdb.toUTC(2019, 12, 31, 6, 0, 0);
+        int b = rdb.toUTC(year, month, 1, 0, 0, 0);
 
 //        int b = rdb.toUTC(year ,month,1,0,0,0);
 
@@ -28,11 +29,11 @@ public class Data {
         }
         int c = rdb.toUTC(year ,month+1,1,0,0,0);
 
-        FloatDataListHolder dataList = new FloatDataListHolder();
+        BoolDataListHolder dataList = new BoolDataListHolder();
 
-        ret = rdb.readFloatHisDataById(id,b,b+100,1, 2,dataList );
+        ret = rdb.readBoolHisDataById(id,b,c,0,dataList);
         System.out.println(ret);
-        FloatData[] data1 = dataList.value;
+        BoolData[] data1 = dataList.value;
         System.out.println(data1.length);
 
         Mysql mysql = new Mysql();

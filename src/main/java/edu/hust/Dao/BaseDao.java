@@ -24,7 +24,7 @@ public class BaseDao {
 
     static {
         Driver ="com.mysql.cj.jdbc.Driver" ;
-        URL = "jdbc:mysql://218.197.228.243:3306/history_database?characterEncoding=utf8&useSSL=true&serverTimezone=UTC";
+        URL = "jdbc:mysql://192.168.1.194:3306/XJdatabase_boolean?characterEncoding=utf8&useSSL=true&serverTimezone=UTC";
         USER = "remote";
         PWD = "123456";
         try {

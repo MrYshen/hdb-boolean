@@ -6,7 +6,7 @@ public class UserDao {
 
     //编写写入数据的mysql语句
     public boolean insertMore1(String sql_suffix,long flag,String tableName,int id) {
-        String sql_prefix = "insert into "+tableName+"(time,value"+") values ";
+        String sql_prefix = "insert into "+tableName+"(t,v,f"+") values ";
         System.out.println(sql_prefix + sql_suffix);
 
         return baseDao.affectRowMore1(sql_prefix + sql_suffix, flag);
