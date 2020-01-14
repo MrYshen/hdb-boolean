@@ -60,7 +60,6 @@ public class Test1 {
             return sql;
         }
 
-
         return null;
     }
 }
